@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "@mui/material";
 import Searcher from "./components/Searcher";
 const App = () => {
+  //Estados iniciales y los mandamos al searcher
+  //El searcher las recibe como props
+  const [inputUser,setInputUser] = useState('octocat');
+  const [userStater,userState] = useState('inputUser');
+  console.log(inputUser);
   return(
     <Container sx={{
       background: 'whitesmoke',
@@ -13,7 +18,7 @@ const App = () => {
       flexDirection: 'Column',
       alignItems: 'center'
     }}>
-      <Searcher></Searcher>
+      <Searcher inputUser={inputUser} setInputUser={setInputUser}></Searcher>
     </Container>
     
   )

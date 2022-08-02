@@ -6,3 +6,16 @@ Identificar los elementos
     <buscador>  primera informacion la de octocat
         <icon>
     <grid de la pagina/>
+
+
+/***CLASE 13***/
+
+agregar estilos a los botones
+
+/***CLASE 14 agregando la funcionalidad ******/
+
+1.  creamos los estados iniciales en App.jsx
+    const [inputUser,setInputUser] = useState('octocat');
+    const [userStater,userState] = useState('inputUser');
+2. Los mandamos en el searcher
+    <Searcher inputUser={inputUser} setInputUser={setInputUser}></Searcher>
