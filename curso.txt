@@ -1,0 +1,8 @@
+/***CLASE 10***/
+https://mui.com/material-ui/getting-started/overview/
+
+Identificar los elementos
+<contenedor/>
+    <buscador>  primera informacion la de octocat
+        <icon>
+    <grid de la pagina/>
