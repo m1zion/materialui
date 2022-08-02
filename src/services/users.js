@@ -1,5 +1,5 @@
 import { urlFetch } from "../constants";
-const getGitHubUser = async(user) => {
+export const getGitHubUser = async(user) => {
     const response = await fetch(`${urlFetch}${user}`,{
         method:'GET'
     })
