@@ -31,3 +31,16 @@ agregar estilos a los botones
     useEffect(()=>{
         gettingUser(inputUser)
     },[])
+
+
+/******CLASE 15  asignamos el usuario not found a Local Storage********/
+   if(userState === 'octocat'){
+      localStorage.setItem('octocat', userResponse)  //Guardamos todo el Json inicial en la variable octocat de localstorage
+    }
+    if(userResponse.message === 'Not Found'){
+      const { octocat } = localStorage;
+      setInputUser(octocat)
+      setNotFound(true) 
+    } else {
+      setUserState(userResponse);
+    }
