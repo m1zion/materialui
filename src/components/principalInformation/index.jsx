@@ -19,7 +19,7 @@ const PrincipalInformation =(props) =>{
      return(
         <Fragment>
             <Stack>
-                <Typography onClick={navigateToProductDetail} userState={userState}>{name}</Typography>    
+                <Typography onClick={navigateToProductDetail}>{name}</Typography>    
                 <Typography>{created_at}</Typography>
             </Stack> {/*Stack Nos ayuda a poner la informacion en flexbox*/}
             <Typography>{login}</Typography>
