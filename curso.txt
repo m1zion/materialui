@@ -33,9 +33,10 @@ agregar estilos a los botones
     },[])
 
 
-/******CLASE 15  asignamos el usuario not found a Local Storage********/
+/******CLASE 16 asignamos el usuario not found a Local Storage********/
+   1. Guardamos todo el Json inicial en la variable octocat de localstorage
    if(userState === 'octocat'){
-      localStorage.setItem('octocat', userResponse)  //Guardamos todo el Json inicial en la variable octocat de localstorage
+      localStorage.setItem('octocat', userResponse)  
     }
     if(userResponse.message === 'Not Found'){
       const { octocat } = localStorage;
@@ -44,3 +45,11 @@ agregar estilos a los botones
     } else {
       setUserState(userResponse);
     }
+
+/******CLASE 17 Creando el contenedor y trayendo la imagen de perfil del usuario********/
+1. Crear un nuevo contenedor userCard
+
+/*********CLASE 18
+1.Creamos el archivo principalInformation en components
+2. Lo llamamos desde nuestro userCard/index.jsx
+  <PrincipalInformation userState={userState}/>

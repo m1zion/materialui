@@ -4,7 +4,7 @@ import Searcher from "../components/Searcher";
 import { getGitHubUser } from '../services/users'; 
 import UserCard from "../containers/userCard";
 import { useNavigate } from "react-router-dom";
-import MyAccount from "../containers/MyAccount";
+import MyAccount from "./MyAccount";
 const Home = () =>{
     
      //Estados iniciales y los mandamos al searcher
@@ -22,7 +22,7 @@ const Home = () =>{
     }
     //Si no encontramos el usuario la mandamos al setInputUser
     if(userResponse.message === 'Not Found'){
-      const { octocat } = localStorage;
+      const { octocat } = localStorage;  //Aqui accedemos a la variable de localstorage de octocat
       setInputUser(octocat)
       setNotFound(true) 
     } else {

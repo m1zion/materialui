@@ -1,10 +1,10 @@
 import React from "react";
 import { Grid, CardMedia } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import MyAccount from "../MyAccount";
+import PrincipalInformation from "../../components/principalInformation";
+import MyAccount from "../../pages/MyAccount";
 const UserCard = (props) =>{
-
-    const navigate = useNavigate();
+    //console.log(props);
 /*
     async function handleSubmit(event) {
       console.log("Navigate");
@@ -13,26 +13,26 @@ const UserCard = (props) =>{
       navigate('../containers/MyAccount');
     }
 */
-const navigateToProductDetail = () => {
-    navigate('../MyAccount');
-  };
-    
+
     const{ userState } = props;
     const{ avatar_url } = userState;
-
     return(
         <Grid
-        contenedor
+        container
         >
             <Grid item xs={3}>
                 <CardMedia
-                    onClick={navigateToProductDetail}
+                    
                     component = "img"
                     alt="GitHub User"
                     image={ avatar_url }
                 />
             </Grid>
-            <Grid item xs={9}></Grid>
+            <Grid item xs={9}>
+            <PrincipalInformation userState={userState}/>
+            </Grid>
+            
+            {/*<Description/>*/}
         </Grid>
     )
 

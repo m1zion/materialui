@@ -1,6 +1,15 @@
 import React from 'react';
 import '../styles/MyAccount.scss';
-const MyAccount = () => {
+const MyAccount = (props) => {
+  const { userState } = props;
+  console.log("---------------");
+  console.log(props);
+  /*const { 
+      name,
+      login,
+      created_at,
+
+   } = userState;*/
     return (
         <div className="login">
         <div className="form-container">

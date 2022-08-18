@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MyAccount from "../containers/MyAccount";
+import MyAccount from "../pages/MyAccount";
 import Home from '../pages/Home';
 //import { BrowserRouter, Routes, Redirect, Switch,Link, Route } from 'react-router-dom';
 const App = () => {
