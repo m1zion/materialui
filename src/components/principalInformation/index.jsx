@@ -18,11 +18,14 @@ const PrincipalInformation =(props) =>{
     
      return(
         <Fragment>
-            <Stack>
-                <Typography onClick={navigateToProductDetail}>{name}</Typography>    
-                <Typography>{created_at}</Typography>
+            <Stack direction="row"
+            sx= {{
+                justifyContent:"space-between"
+            }}>
+                <Typography variant="h4" onClick={navigateToProductDetail}>{name}</Typography>    
+                <Typography variant="subtitle2">{created_at}</Typography>
             </Stack> {/*Stack Nos ayuda a poner la informacion en flexbox*/}
-            <Typography>{login}</Typography>
+            <Typography variant="caption">{`@${login}`}</Typography>
         </Fragment>
      )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, CardMedia } from "@mui/material";
+import { Grid, CardMedia, Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import PrincipalInformation from "../../components/principalInformation";
 import Description from "../Description";
@@ -26,6 +26,10 @@ const UserCard = (props) =>{
     return(
         <Grid
         container
+        spacing={2}
+        sx={{
+            marginTop:'15px'
+        }}
         >
             <Grid item xs={3}>
                 <CardMedia
@@ -33,15 +37,25 @@ const UserCard = (props) =>{
                     component = "img"
                     alt="GitHub User"
                     image={ avatar_url }
+                    sx={{
+                        borderRadius:'50%',
+                        marginLeft:'5px'
+                    }}
                 />
             </Grid>
-            <p onClick={() => navigateToProductDetail(avatar_url)}>$Dis</p>
+            {/*<p onClick={() => navigateToProductDetail(avatar_url)}>$Dis</p>*/}
             <Grid item xs={9}>
-            <PrincipalInformation userState={userState}/>
-            <Description userState={userState}/>
-            <MyAccount userState={userState}/>
-            </Grid>
-            
+                <Stack
+                    direction='column'
+                    spacinf={1}
+                    sx={{
+                        margin:'30px'
+                    }}>
+                    <PrincipalInformation userState={userState}/>
+                    <Description userState={userState}/>
+                    {/*<MyAccount userState={userState}/>*/}
+                </Stack>
+            </Grid>            
             {/*<Description/>*/}
         </Grid>
     )
